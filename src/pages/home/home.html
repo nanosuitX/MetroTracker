@@ -11,9 +11,9 @@
   		Add Card<ion-icon name="add-circle"></ion-icon>
   </button>
 
-  <ion-card>
+  <ion-card no-padding >
   
-    <ion-card-header>
+    <ion-card-header (click)="openModal()">
     	<ion-row>
 	    	<ion-col col-8>
 	    		 Card no 000000000
@@ -28,19 +28,21 @@
     <ion-card-content>
       <ion-grid>
       
-      	<ion-row>
-      		<ion-col col-8>
+      	<ion-row no-padding>
+      		<ion-col col-5>
       			Recharge Card
       		</ion-col>
-      		<ion-col col-2>
-      			<button ion-button icon-only (click)="openModal()">
-      				<ion-icon name="arrow-dropup-circle"></ion-icon>
-      			</button>
-      		</ion-col>
-      		<ion-col col-2>
-      		<button ion-button icon-only (click)="openModal()">
-      				<ion-icon name="arrow-dropdown-circle"></ion-icon>
-      			</button>
+      		<ion-col col-7>
+      			<ion-row>
+	      			<button ion-button full>
+	      				<ion-icon name="arrow-dropup-circle"></ion-icon>
+	      			</button>
+      			</ion-row>
+      			<ion-row>
+	      			<button ion-button full>
+	      				<ion-icon name="arrow-dropdown-circle"></ion-icon>
+	      			</button>
+      			</ion-row>
       		</ion-col>
       	</ion-row>
       </ion-grid>

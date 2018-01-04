@@ -14,22 +14,7 @@
 
 
 <ion-content no-padding>
-	<ion-list>
-		<ion-list-header>
-			Default Trip
-		</ion-list-header>
-		<ion-item-sliding>
-			<ion-item style="background-color: yellow;">
-				Trip1
-			</ion-item>
-			<ion-item-options side="left">
-			
-			</ion-item-options>
-		
-		</ion-item-sliding>
-	</ion-list>
-<br/>
-<br/>
+
 	<ion-list>
 		<ion-list-header>
 			Custom Trip
@@ -57,11 +42,49 @@
 				<ion-option value="d1">D1</ion-option>
 			</ion-select>
 		</ion-item>
-
+	
 		<ion-item>
-			<button ion-button full color="secondary" (click)="customTrip()"></button>
+			<button ion-button full color="secondary" (click)="customTrip()">Make a custom trip</button>
 		</ion-item>		
 	</ion-list>
 
+	<br/>
+	<br/>
+
+	<ion-list>
+		<ion-list-header>
+			Change Default Trip
+		</ion-list-header>
+		<ion-item>
+			<ion-label>
+				Source
+			</ion-label>
+			<ion-select>
+				<ion-option value="a1">A1</ion-option>
+				<ion-option value="b1">B1</ion-option>
+				<ion-option value="c1">C1</ion-option>
+				<ion-option value="d1">D1</ion-option>
+			</ion-select>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>
+				Destination
+			</ion-label>
+			<ion-select>
+				<ion-option value="a1">A1</ion-option>
+				<ion-option value="b1">B1</ion-option>
+				<ion-option value="c1">C1</ion-option>
+				<ion-option value="d1">D1</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<button ion-button full (click)="customTrip()">Save Default</button>
+		</ion-item>
+	</ion-list>
+
+	
+	<button ion-button full>Trip log</button>
+	<button ion-button full icon-left><ion-icon name="build"></ion-icon>Card Settings</button>
 	<button ion-button full (click)="close()">Close</button>
 </ion-content>
