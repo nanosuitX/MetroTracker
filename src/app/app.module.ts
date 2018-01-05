@@ -7,13 +7,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TripPage } from '../pages/trip/trip'
+import { AddpagePage } from '../pages/addpage/addpage';
+import { DatabaseProvider } from '../providers/database/database';
+
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    TripPage
+    TripPage,
+    AddpagePage
   ],
   imports: [
     BrowserModule,
@@ -23,12 +27,14 @@ import { TripPage } from '../pages/trip/trip'
   entryComponents: [
     MyApp,
     HomePage,
-    TripPage
+    TripPage,
+    AddpagePage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatabaseProvider
   ]
 })
 export class AppModule {}
